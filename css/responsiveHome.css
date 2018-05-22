@@ -5,12 +5,20 @@ li {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 h2 {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 5px;
   padding-left: 10px;
   margin: 0 !important;
+}
+.res-name {
+  text-align: center !important;
+  padding-left: 0;
 }
 #restaurants-list {
   display: flex;
@@ -32,7 +40,7 @@ h2 {
 
 /*Mobile View*/
 @media screen and (max-width: 600px) {
-  #burgerContainer, .hamburger .filter-options{
+  #burgerContainer, .hamburger .filter-options {
     display: block;
   }
   #neighborhoods-select, #cuisines-select {
@@ -49,3 +57,5 @@ html, body {
   overflow-x: hidden !important;
   width: 100% !important;
 }
+
+

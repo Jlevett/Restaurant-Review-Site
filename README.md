@@ -1,28 +1,50 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Review Site
+By Jeremy Levett
 
-## Project Overview: Stage 1
+## About
+Transformed a static webpage into a mobile-ready offline web application.
+The code was updated to resolve these issues and add extra features while still maintaining the included functionality.
+Features included:
+* The ability to filter restaurants by neighborhood and cuisine type was added.
+* Responsive design on different sized displays
+* A Google Map with animated Google Map Markers retrieved asynchronously from the Google Maps API.
+* Best practices of A11Y, implementing ARIA and semantic HTML for screen reader use.
+* A simple offline-first caching strategy using a service worker was added to create a seamless offline experience
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+[APP HOSTED HERE. CLICK TO TRY IT OUT!](https://jlevett.github.io/Restaurant-Review-Site/ "Live App Hosted Here")
 
-### Specification
+### Responsive in desktop mode
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+![Gif](https://github.com/Jlevett/Restaurant-Review-Site/blob/master/restaurant%20desktop.gif)
 
-### What do I do from here?
+### Responsive in mobile mode
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+![Gif](https://github.com/Jlevett/Restaurant-Review-Site/blob/master/restaurant%20mobile.gif)
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+Udacity Project Reviewer comment:
+_"Congratulations, your submission looks awesome! You fixed all the bugs. 
+This is great!, I enjoyed reviewing this."_
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and make start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+## Local Installation 
+1. Download the zip file.
+2. Extract it into a folder
+3. Run 'python -m http.server 8000' in bash.
+4. Open up http://localhost:8000 in chrome.
 
-### Note about ES6
+Note: In Dev Tools, disconnect the internet or set the throttling to a low Internet speed to check out the offline experience of the app!
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+## Technology
+* PWA - serviceWorker (offline first)
+* HTML
+* CSS
+* Google Maps API
+* ay11 (accessibility)
+* Responsive design using CSS Flexbox (desktop to mobile)
 
+## Desktop Screenshot
+![Image of App Desktop](https://github.com/Jlevett/Restaurant-Review-Site/blob/master/restaurant%20home.png)
 
+![Image of App Desktop](https://github.com/Jlevett/Restaurant-Review-Site/blob/master/restaurant%20details.png)
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Jlevett/Restaurant-Review-Site/blob/master/LICENSE) file for details.

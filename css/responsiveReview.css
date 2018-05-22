@@ -8,6 +8,16 @@
   margin-left: auto;
   margin-right: auto;
 }
+#breadcrumb {
+  text-align: left;
+  background-color: #E0DDDD;
+}
+h1 {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 p:nth-child(1) {
   width:50%;
   text-align: left;
@@ -26,7 +36,7 @@ p:nth-child(2) {
 }
 p:nth-child(3) {
     background: orange;
-    display:inline-block;
+    display: inline-block;
     color: white;
     padding-left: 4px;
     padding-right: 4px;
@@ -53,14 +63,14 @@ p:nth-child(4) {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding:0;
+    padding: 0;
   }
   #reviews-container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-right:0;
-    padding-left:0;
+    padding-right: 0;
+    padding-left: 0;
   }
   #restaurant-name {
     margin-bottom: 15px;
@@ -73,8 +83,8 @@ p:nth-child(4) {
     margin-right: auto;
   }
   #footer {
-    padding-left:0px;
-    width:95% !important;
+    padding-left: 0px;
+    width: 95% !important;
   }
 }
 
@@ -91,7 +101,7 @@ p:nth-child(4) {
     margin: 0 auto;
   }
   .inside #map-container {
-    height: 87%;
+    height: 100%;
     position: fixed;
     right: 0;
     top: 80px;
@@ -103,7 +113,9 @@ p:nth-child(4) {
     width: 100%;
   }
 }
+
 html, body {
   overflow-x: hidden !important;
   width: 100% !important;
 }
+
