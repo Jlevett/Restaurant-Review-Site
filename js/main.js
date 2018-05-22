@@ -105,6 +105,7 @@ updateRestaurants = () => {
       fillRestaurantsHTML();
     }
   })
+
 }
 
 /**
@@ -116,7 +117,7 @@ resetRestaurants = (restaurants) => {
   const ul = document.getElementById('restaurants-list');
   ul.innerHTML = '';
 
-  // Remove all map markers
+  // restaurant-imgove all map markers
   self.markers.forEach(m => m.setMap(null));
   self.markers = [];
   self.restaurants = restaurants;
@@ -126,21 +127,24 @@ resetRestaurants = (restaurants) => {
  * Create all restaurants HTML and add them to the webpage.
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
+  let tabIndex = 5;
   const ul = document.getElementById('restaurants-list');
   restaurants.forEach(restaurant => {
-    ul.append(createRestaurantHTML(restaurant));
+    ul.append(createRestaurantHTML(restaurant, tabIndex++));
   });
   addMarkersToMap();
 }
 
 /**
  * Create restaurant HTML.
+ * Review changes.
  */
-createRestaurantHTML = (restaurant) => {
+ createRestaurantHTML = (restaurant, tabIndex) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = restaurant.name + 'image';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
@@ -158,10 +162,12 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.setAttribute('tabindex', tabIndex.toString());
+  more.setAttribute('aria-label', 'View details for ' + restaurant.name );
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  li.append(more);
 
-  return li
+  return li;
 }
 
 /**
@@ -181,6 +187,12 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 //Setup event listeners for burger menu clicks and viewport changes.
 filterhamburger = () => {
   const handler = document.querySelector('.hamburger-box');
+  //For keyPress
+  handler.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13)
+      hamburgerToggle(e);
+  });
   //For MouseClick or Touch
   handler.addEventListener('click', hamburgerToggle);
 
@@ -200,11 +212,14 @@ hamburgerToggle = (event) => {
     hamburger.className = "hamburger hamburger--minus js-hamburger";
     neighborhoodSelect.style.display = "none";
     cuisinesSelect.style.display = "none";
+    //Add in accessibility
+    handler.setAttribute('aria-label', 'Hamburger Menu. Closed. Open with Enter Key Stroke');
   } else {
     hamburger.className = "hamburger hamburger--minus is-active";
     neighborhoodSelect.style.display = "inline";
     cuisinesSelect.style.display = "inline";
-
+    //Add in accessibility
+    handler.setAttribute('aria-label', 'Hamburger Menu. Currently Open');
   }
 };
 
@@ -219,10 +234,14 @@ backtoDefaultFilter = (event) => {
     neighborhoodSelect.style.display = "inline";
     cuisinesSelect.style.display = "inline";
     hamburger.className = "hamburger hamburger--minus js-hamburger";
+    //Add in accessibility
+    handler.setAttribute('aria-label', 'Hamburger Menu. Currently Open');
   }
   //If viewport is less than 600px then hide the selection boxes
   else if(document.body.clientWidth<=583 && hamburger.className === "hamburger hamburger--minus js-hamburger") {
     neighborhoodSelect.style.display = "none";
     cuisinesSelect.style.display = "none";
+    //Add in accessibility
+    handler.setAttribute('aria-label', 'Hamburger Menu. Closed. Open with Enter Key Stroke');
   }
 };
