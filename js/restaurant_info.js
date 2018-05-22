@@ -62,9 +62,11 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
   cuisine.setAttribute('aria-label', 'Food Type is ' + restaurant.cuisine_type );
+  // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
   }
+  // fill reviews
   fillReviewsHTML();
 }
 
