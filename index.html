@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="shortcut icon" type="image/png" href="img/Smiley.png"> -->
+  <link rel="shortcut icon" type="image/png" href="img/Smiley.png">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css">
@@ -13,12 +13,13 @@
   <title>Restaurant Reviews Home Page</title>
 </head>
 <body>
-  <a href="#filterops" tabindex="0" aria-label='skip to main content'></a>
+  <a href="#filterops" tabindex="0" aria-label="skip to main content"></a>
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1 tabindex ='-1'><a href="/" tabindex="-1">Restaurant Reviews</a></h1>
+      <h1 tabindex="-1">
+      <a href="/"" tabindex="-1">Restaurant Reviews</a></h1>
     </nav>
     <!-- End nav -->
   </header>
@@ -26,17 +27,17 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning Map -->
-    <section id="map-container" tabindex="0" aria-label = 'Google Maps Internal Window'>
+    <section id="map-container" tabindex="0" aria-label="Google Maps Internal Window">
       <div id="map" ></div>
     </section>
     <!-- End Map -->
     <section>
-    <div class="filter-options" id="filterops">
-        <h2 tabindex = '1' aria-label = 'Filter restaurant location'>Filter Results</h2>
-        <!-- Beginning Hamburger Menu -->
-        <div id="burgerContainer" >  <!-- To finish this -->
+      <div class="filter-options" id="filterops">
+        <h2 tabindex="1" aria-label="Filter restaurant location">Filter Results</h2>
+          <!-- Beginning Hamburger Menu -->
+        <div id="burgerContainer">
           <button class="hamburger hamburger--minus js-hamburger" type="button">
-            <span class="hamburger-box" tabindex = '2' aria-label='Hamburger Menu. Closed. Open with Enter Key Stroke'>
+            <span class="hamburger-box" tabindex="2" aria-label="Hamburger Menu. Closed. Open with Enter Key Stroke">
               <span class="hamburger-inner">
               </span>
             </span>
@@ -49,7 +50,7 @@
         <select id="cuisines-select" tabindex="4" aria-label="Select Meal Type" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
-      </div>
+       </div>
       <ul id="restaurants-list"></ul>
     </section>
   </main>
@@ -59,9 +60,9 @@
   <script type="application/javascript" charset="utf-8" src="js/sw-registration.js"></script>
   <!-- Database helpers -->
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
-   <!-- Main javascript file -->
+  <!-- Main javascript file -->
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-    <!-- Google Maps -->
+  <!-- Google Maps -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRuujm_2Y9GRxfBArRTtJoDpkSufA6wA0&libraries=places&callback=initMap"></script>
   <!-- End scripts -->
   <!-- Beginning footer -->

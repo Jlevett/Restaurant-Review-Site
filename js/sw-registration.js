@@ -1,3 +1,6 @@
+/**
+*Register the service worker.
+*/
   //Checks to see if the service worker API is available
   if ('serviceWorker' in navigator) {
     //The service worker at /sw.js is registered once the page is loaded.

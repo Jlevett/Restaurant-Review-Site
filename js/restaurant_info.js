@@ -113,7 +113,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   tabIndex = '7';
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review, tabIndex));
-    tabIndex +=4;
+    tabIndex += 4;
   });
   container.appendChild(ul);
 }

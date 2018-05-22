@@ -32,7 +32,7 @@ h2 {
 
 /*Mobile View*/
 @media screen and (max-width: 600px) {
-  #burgerContainer, .hamburger .filter-options{
+  #burgerContainer, .hamburger .filter-options {
     display: block;
   }
   #neighborhoods-select, #cuisines-select {
