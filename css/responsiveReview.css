@@ -1,0 +1,109 @@
+#reviews-list li {
+  display: flex !important;
+  flex-wrap: wrap;
+  border-radius: 15px 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+p:nth-child(1) {
+  width:50%;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid #000;
+}
+p:nth-child(2) {
+  width:50%;
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid #000;
+}
+p:nth-child(3) {
+    background: orange;
+    display:inline-block;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+p:nth-child(4) {
+ width:100%;
+}
+/*Mobile View*/
+@media screen and (max-width: 600px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  td {
+    font-size: 2.75vw;
+  }
+  h2,#restaurant-name, #restaurant-address {
+    text-align: center;
+  }
+  #breadcrumb {
+    width:100%;
+  }
+  #restaurant-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+  }
+  #reviews-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right:0;
+    padding-left:0;
+  }
+  #restaurant-name {
+    margin-bottom: 15px;
+  }
+  #restaurant-img, #restaurant-cuisine, #map-container, #map {
+    width: 100%;
+  }
+  #restaurant-hours {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #footer {
+    padding-left:0px;
+    width:95% !important;
+  }
+}
+
+/*Desktop View*/
+@media screen and (min-width: 600px) {
+  p, li, td {
+    font-size: 1.5vw !important;
+  }
+  #restaurant-container, h2 {
+    text-align: center !important;
+  }
+  #restaurant-hours {
+    text-align: left;
+    margin: 0 auto;
+  }
+  .inside #map-container {
+    height: 87%;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 50%;
+  }
+  .inside #map {
+    background-color: #ccc;
+    height: 100%;
+    width: 100%;
+  }
+}
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}

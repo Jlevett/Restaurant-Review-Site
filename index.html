@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="shortcut icon" type="image/png" href="img/Smiley.png"> -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css">
-  <title>Restaurant Reviews</title>
+  <link rel="stylesheet" href="css/responsiveHome.css">
+  <!-- Hamburger menu css lib -->
+  <link rel="stylesheet" href="css/hamburgers.css">
+  <title>Restaurant Reviews Home Page</title>
 </head>
-
 <body>
+  <!-- Beginning header -->
   <header>
+    <!-- Beginning nav -->
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
+    <!-- End nav -->
   </header>
-
+  <!-- End header <--></-->
+<!-- Beginning main -->
   <main id="maincontent">
+    <!-- Beginning Map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" ></div>
     </section>
+    <!-- End Map -->
     <section>
-      <div class="filter-options">
-        <h2>Filter Results</h2>
+    <div class="filter-options">
+        <h2 >Filter Results</h2>
+        <!-- Beginning Hamburger Menu -->
+        <div id="burgerContainer" >
+          <button class="hamburger hamburger--minus js-hamburger" type="button">
+            <span class="hamburger-box" >
+              <span class="hamburger-inner">
+              </span>
+            </span>
+          </button>
+        </div>
+        <!-- End Hamburger Menu -->
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
@@ -31,16 +52,19 @@
       <ul id="restaurants-list"></ul>
     </section>
   </main>
-
+  <!-- End main -->
+  <!-- Beginning scripts -->
+  <!-- Database helpers -->
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+   <!-- Main javascript file -->
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
-
-
-  <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    <!-- Google Maps -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRuujm_2Y9GRxfBArRTtJoDpkSufA6wA0&libraries=places&callback=initMap"></script>
+  <!-- End scripts -->
+  <!-- Beginning footer -->
+  <footer id="footer" >
+    Copyright (c) 2017 <a href="/" ><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
-
+  <!-- End footer -->
 </body>
-
 </html>

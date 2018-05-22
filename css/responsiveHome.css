@@ -1,0 +1,51 @@
+body {
+  min-width: 400px;
+}
+li {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+h2 {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin: 0 !important;
+}
+#restaurants-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#burgerContainer {
+  display: none;
+}
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-options {
+  height: 100%;
+}
+.hamburger {
+  padding-right: 10px;
+}
+
+/*Mobile View*/
+@media screen and (max-width: 600px) {
+  #burgerContainer, .hamburger .filter-options{
+    display: block;
+  }
+  #neighborhoods-select, #cuisines-select {
+    display: none;
+  }
+  .filter-options select {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}

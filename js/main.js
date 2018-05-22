@@ -10,6 +10,7 @@ var markers = []
 document.addEventListener('DOMContentLoaded', (event) => {
   fetchNeighborhoods();
   fetchCuisines();
+  filterhamburger();
 });
 
 /**
@@ -176,3 +177,52 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+//Setup event listeners for burger menu clicks and viewport changes.
+filterhamburger = () => {
+  const handler = document.querySelector('.hamburger-box');
+  //For MouseClick or Touch
+  handler.addEventListener('click', hamburgerToggle);
+
+  window.addEventListener("resize", backtoDefaultFilter);
+};
+
+/*Home page: Burger Menu additions*/
+
+//if burger is click is pressed it toggles the burger menu type and selection boxes.
+hamburgerToggle = (event) => {
+  const handler = document.querySelector('.hamburger-box');
+  const hamburger = document.querySelector('.hamburger');
+  const neighborhoodSelect =  document.querySelector('#neighborhoods-select');
+  const cuisinesSelect = document.querySelector('#cuisines-select');
+
+  if (hamburger.className === "hamburger hamburger--minus is-active") {
+    hamburger.className = "hamburger hamburger--minus js-hamburger";
+    neighborhoodSelect.style.display = "none";
+    cuisinesSelect.style.display = "none";
+  } else {
+    hamburger.className = "hamburger hamburger--minus is-active";
+    neighborhoodSelect.style.display = "inline";
+    cuisinesSelect.style.display = "inline";
+
+  }
+};
+
+//If the viewport gets wider  than 600px it reset selectors to open so the menus dont get lost.
+backtoDefaultFilter = (event) => {
+  const handler = document.querySelector('.hamburger-box');
+  const hamburger = document.querySelector('.hamburger');
+  const neighborhoodSelect =  document.querySelector('#neighborhoods-select');
+  const cuisinesSelect = document.querySelector('#cuisines-select');
+
+  if (document.body.clientWidth>583) {
+    neighborhoodSelect.style.display = "inline";
+    cuisinesSelect.style.display = "inline";
+    hamburger.className = "hamburger hamburger--minus js-hamburger";
+  }
+  //If viewport is less than 600px then hide the selection boxes
+  else if(document.body.clientWidth<=583 && hamburger.className === "hamburger hamburger--minus js-hamburger") {
+    neighborhoodSelect.style.display = "none";
+    cuisinesSelect.style.display = "none";
+  }
+};
