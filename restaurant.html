@@ -20,8 +20,8 @@
       <h1><a href="/" tabindex="0" aria-label="Back to Home Page">Restaurant Reviews</a></h1>
     </nav>
       <!-- Beginning breadcrumb -->
-      <ul id="breadcrumb" tabindex ="-1">
-        <li tabindex="-1"><a href="/" tabindex="-1">Home</a></li>
+      <ul id="breadcrumb" tabindex ="0" aria-label = 'Home Link'>
+        <li tabindex="-1"><a href="/" tabindex="0">Home</a></li>
       </ul>
       <!-- End breadcrumb -->
     <!-- End nav -->
@@ -30,14 +30,14 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container" tabindex="0" aria-label="Google Maps Internal Window">
+    <section id="map-container" tabindex="0" role="application" aria-label="Google Maps Internal Window">
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
       <h1 id="restaurant-name" tabindex="1"></h1>
-      <img id="restaurant-img" tabindex="2" aria-label="Restaurant Image">
+      <img id="restaurant-img" tabindex="2">
       <p id="restaurant-cuisine" tabindex="3"></p>
       <p id="restaurant-address" tabindex="4"></p>
       <table id="restaurant-hours" tabindex="5"></table>
