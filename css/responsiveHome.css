@@ -5,6 +5,10 @@ li {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 h2 {
   width: 100%;
   padding-top: 10px;
@@ -53,3 +57,5 @@ html, body {
   overflow-x: hidden !important;
   width: 100% !important;
 }
+
+

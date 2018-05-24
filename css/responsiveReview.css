@@ -8,6 +8,16 @@
   margin-left: auto;
   margin-right: auto;
 }
+#breadcrumb {
+  text-align: left;
+  background-color: #E0DDDD;
+}
+h1 {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 p:nth-child(1) {
   width:50%;
   text-align: left;
@@ -91,7 +101,7 @@ p:nth-child(4) {
     margin: 0 auto;
   }
   .inside #map-container {
-    height: 87%;
+    height: 100%;
     position: fixed;
     right: 0;
     top: 80px;
@@ -108,3 +118,4 @@ html, body {
   overflow-x: hidden !important;
   width: 100% !important;
 }
+
